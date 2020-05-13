@@ -28,6 +28,42 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: $font-body;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 90rem; //1440px
+  margin: 0 auto;
+}
+
+.inner {
+  width: 100%;
+  max-width: 70rem; //1120px
+  margin: 0 auto;
+}
+
+.inner-padding {
+  padding: 0 1.5rem;
+  // padding: 1.875rem 1.5rem;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.cta {
+  text-transform: uppercase;
+  width: 9rem;
+  height: 2.5rem;
+  // color: $neutral-light-gray;
+  // background: transparent;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+
+  &--hero {
+    color: $neutral-light-gray;
+    background: transparent;
+  }
 }

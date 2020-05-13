@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html,
+body {
+  height: 100%; }
+
+html {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Karla", sans-serif; }
+
+.wrapper {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto; }
+
+.inner {
+  width: 100%;
+  max-width: 70rem;
+  margin: 0 auto; }
+
+.inner-padding {
+  padding: 0 1.5rem; }
+
+img {
+  width: 100%;
+  display: block; }
+
+.cta {
+  text-transform: uppercase;
+  width: 9rem;
+  height: 2.5rem;
+  letter-spacing: 1px;
+  font-size: 0.8rem; }
+  .cta--hero {
+    color: #fafafa;
+    background: transparent; }
+
+header nav {
+  min-height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header nav .nav_links {
+    display: flex;
+    text-transform: uppercase;
+    list-style: none;
+    text-decoration: none; }
+
+header .hero {
+  text-align: center; }
+  header .hero__text {
+    background-color: #2d2640;
+    color: #fafafa; }
+    header .hero__text h1 {
+      font-family: "DM Serif Display", serif;
+      font-size: 2.8rem;
+      line-height: 1.1;
+      padding-bottom: 1rem; }
+    header .hero__text p {
+      line-height: 1.5;
+      padding-bottom: 2.3rem; }
+  header .hero__padding {
+    padding-top: 6.375rem;
+    padding-bottom: 6.375rem; }
