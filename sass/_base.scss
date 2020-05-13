@@ -1,0 +1,33 @@
+//VARIABLES
+//Colors
+$primary-dark-violet: hsl(256, 26%, 20%);
+$primary-grayish-blue: hsl(216, 30%, 68%);
+$neutral-deep-violet: hsl(270, 9%, 17%);
+$neutral-grayish-violet: hsl(273, 4%, 51%);
+$neutral-light-gray: hsl(0, 0%, 98%);
+
+$font-heading: "DM Serif Display", serif;
+$font-body: "Karla", sans-serif; //400,700
+
+//RESET
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-body;
+}
