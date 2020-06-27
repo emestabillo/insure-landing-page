@@ -33,6 +33,16 @@ img {
   width: 100%;
   display: block; }
 
+h1,
+h2 {
+  font-family: "DM Serif Display", serif; }
+
+p {
+  line-height: 1.5; }
+
+li {
+  list-style: none; }
+
 .cta {
   text-transform: uppercase;
   width: 9rem;
@@ -65,8 +75,34 @@ header .hero {
       line-height: 1.1;
       padding-bottom: 1rem; }
     header .hero__text p {
-      line-height: 1.5;
       padding-bottom: 2.3rem; }
   header .hero__padding {
-    padding-top: 6.375rem;
-    padding-bottom: 6.375rem; }
+    padding-top: 6rem;
+    padding-bottom: 6rem; }
+
+.features {
+  text-align: center;
+  padding-top: 8.75rem;
+  padding-bottom: 9rem; }
+  .features hr {
+    width: 40%;
+    margin: 0 auto; }
+  .features__heading {
+    color: #2b272f;
+    font-size: 2.8rem;
+    padding: 2rem 0 4.25rem; }
+  .features__list li {
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-rows: 5.5rem 3.8rem 5rem;
+    grid-gap: 1rem; }
+    .features__list li img {
+      width: 5.375rem;
+      height: 5.375rem;
+      margin: 0 auto; }
+    .features__list li h2 {
+      color: #2b272f;
+      font-size: 1.7rem;
+      align-self: end; }
+    .features__list li p {
+      color: #837d87; }

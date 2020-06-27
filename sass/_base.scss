@@ -53,6 +53,19 @@ img {
   display: block;
 }
 
+h1,
+h2 {
+  font-family: $font-heading;
+}
+
+p {
+  line-height: 1.5;
+}
+
+li {
+  list-style: none;
+}
+
 .cta {
   text-transform: uppercase;
   width: 9rem;

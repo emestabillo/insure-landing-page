@@ -27,13 +27,50 @@ header {
         padding-bottom: 1rem;
       }
       p {
-        line-height: 1.5;
         padding-bottom: 2.3rem;
       }
     }
     &__padding {
-      padding-top: 6.375rem;
-      padding-bottom: 6.375rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+}
+
+.features {
+  text-align: center;
+  padding-top: 8.75rem;
+  padding-bottom: 9rem;
+
+  hr {
+    width: 40%;
+    margin: 0 auto;
+  }
+  &__heading {
+    color: $neutral-deep-violet;
+    font-size: 2.8rem;
+    padding: 2rem 0 4.25rem;
+  }
+  &__list {
+    li {
+      padding-bottom: 3rem;
+      display: grid;
+      grid-template-rows: 5.5rem 3.8rem 5rem;
+      grid-gap: 1rem;
+
+      img {
+        width: 5.375rem;
+        height: 5.375rem;
+        margin: 0 auto;
+      }
+      h2 {
+        color: $neutral-deep-violet;
+        font-size: 1.7rem;
+        align-self: end;
+      }
+      p {
+        color: $neutral-grayish-violet;
+      }
     }
   }
 }
