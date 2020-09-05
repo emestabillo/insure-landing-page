@@ -12,8 +12,7 @@ html {
 
 body {
   font-family: "Karla", sans-serif;
-  max-width: 144rem;
-  margin: 0 auto; }
+  max-width: 144rem; }
 
 .container {
   max-width: 111rem;
@@ -36,15 +35,13 @@ li {
 
 .cta {
   text-transform: uppercase;
-  width: 9rem;
-  height: 2.5rem;
   letter-spacing: 1px;
   font-size: 0.8rem;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 1.5px solid #fff;
+  background: #2d2640;
+  color: #fafafa; }
   .cta--nav {
-    color: #fafafa;
-    background: #2d2640;
-    border: 1.5px solid #fff;
     font-family: "Karla", sans-serif;
     letter-spacing: 1.36px;
     font-size: 2rem;
@@ -54,7 +51,7 @@ li {
     .cta--nav:hover {
       background: #fafafa;
       color: #2d2640; }
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 768px) {
       .cta--nav {
         background: none;
         color: #2d2640;
@@ -67,16 +64,23 @@ li {
         .cta--nav:hover {
           background: #2d2640;
           color: #fafafa; } }
+  .cta--hero {
+    width: 14.6rem;
+    height: 4rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    letter-spacing: 1.5px; }
 
-header nav {
+nav {
   padding: 2.4rem 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  @media screen and (min-width: 992px) {
-    header nav {
-      padding: 2.1rem 0 0 0.3rem; } }
-  header nav .nav_links {
+  @media screen and (min-width: 768px) {
+    nav {
+      padding: 2rem 0 1.8rem 0.3rem; } }
+  nav .nav_links {
     transform: scale(0);
     position: fixed;
     list-style: none;
@@ -96,12 +100,7 @@ header nav {
     list-style: none;
     margin: 0 auto; }
     @media screen and (min-width: 768px) {
-      header nav .nav_links {
-        left: 2rem;
-        right: 2rem;
-        width: 75rem; } }
-    @media screen and (min-width: 992px) {
-      header nav .nav_links {
+      nav .nav_links {
         position: static;
         display: flex;
         display: grid;
@@ -113,13 +112,13 @@ header nav {
         width: unset;
         padding: 0;
         margin: 0; } }
-    header nav .nav_links li {
+    nav .nav_links li {
       line-height: 4rem;
       padding-bottom: 2.4rem; }
-      @media screen and (min-width: 992px) {
-        header nav .nav_links li {
+      @media screen and (min-width: 768px) {
+        nav .nav_links li {
           padding-bottom: 0; } }
-      header nav .nav_links li:last-child::after {
+      nav .nav_links li:last-child::after {
         content: "";
         background-image: url(/images/bg-pattern-mobile-nav.svg);
         position: absolute;
@@ -129,57 +128,95 @@ header nav {
         width: 100%;
         width: 100%;
         background-size: cover; }
-        @media screen and (min-width: 992px) {
-          header nav .nav_links li:last-child::after {
+        @media screen and (min-width: 768px) {
+          nav .nav_links li:last-child::after {
             display: none; } }
-      header nav .nav_links li a {
+      nav .nav_links li a {
         text-decoration: none;
         color: #fafafa;
         font-size: 2rem;
         padding: 1.2rem;
         letter-spacing: 1.36px;
         font-weight: 400; }
-        header nav .nav_links li a:hover {
+        nav .nav_links li a:hover {
           color: #95a9c6; }
-        @media screen and (min-width: 992px) {
-          header nav .nav_links li a {
+        @media screen and (min-width: 768px) {
+          nav .nav_links li a {
             color: #837d87;
             font-size: 1.3rem;
             letter-spacing: 1.5px;
             font-weight: bold;
             padding: 0; }
-            header nav .nav_links li a:hover {
+            nav .nav_links li a:hover {
               color: #2d2640; } }
-  header nav #toggle {
+  nav #toggle {
     display: none; }
-  header nav .menu-icon {
+  nav .menu-icon {
     width: 3.2rem;
     height: 3.2rem;
     cursor: pointer;
     background-image: url(/images/icon-hamburger.svg); }
-    @media screen and (min-width: 992px) {
-      header nav .menu-icon {
+    @media screen and (min-width: 768px) {
+      nav .menu-icon {
         display: none; } }
-  header nav #toggle:checked + .menu-icon {
+  nav #toggle:checked + .menu-icon {
     background-image: url(/images/icon-close.svg); }
-  header nav #toggle:checked ~ .nav_links {
+  nav #toggle:checked ~ .nav_links {
     transform: scale(1); }
 
 .hero {
-  text-align: center; }
+  text-align: center;
+  background: #2d2640; }
+  @media screen and (min-width: 768px) {
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative; }
+      .hero::before {
+        content: url(/images/bg-pattern-intro-left-desktop.svg);
+        position: absolute;
+        top: 0;
+        left: 0; } }
+  @media screen and (min-width: 768px) {
+    .hero__image {
+      flex: 1;
+      order: 2;
+      transform: translateY(6.5rem); } }
   .hero__text {
     background-color: #2d2640;
-    color: #fafafa; }
+    color: #fafafa;
+    padding: 9.3rem 0;
+    position: relative; }
+    @media screen and (min-width: 768px) {
+      .hero__text {
+        flex: 1;
+        order: 1; } }
+    .hero__text::before {
+      content: url(/images/bg-pattern-intro-left-mobile.svg);
+      position: absolute;
+      top: 0;
+      left: 0; }
+      @media screen and (min-width: 768px) {
+        .hero__text::before {
+          display: none; } }
+    .hero__text::after {
+      content: url(/images/bg-pattern-intro-right-mobile.svg);
+      position: absolute;
+      bottom: -18.1rem;
+      right: 0; }
+      @media screen and (min-width: 768px) {
+        .hero__text::after {
+          display: none; } }
     .hero__text h1 {
       font-family: "DM Serif Display", serif;
-      font-size: 2.8rem;
-      line-height: 1.1;
-      padding-bottom: 1rem; }
+      font-size: 4.8rem;
+      line-height: 1;
+      letter-spacing: -0.67px; }
     .hero__text p {
-      padding-bottom: 2.3rem; }
-  .hero__padding {
-    padding-top: 6rem;
-    padding-bottom: 6rem; }
+      font-size: 1.6rem;
+      line-height: 1.625;
+      padding: 1.6rem 0.8rem 3.2rem; }
 
 .features {
   text-align: center;

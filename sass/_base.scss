@@ -41,7 +41,7 @@ html {
 body {
   font-family: $font-body;
   max-width: 144rem;
-  margin: 0 auto;
+  // margin: 0 auto;
 }
 
 .container {
@@ -70,18 +70,17 @@ li {
 
 .cta {
   text-transform: uppercase;
-  width: 9rem;
-  height: 2.5rem;
-  // color: $neutral-light-gray;
-  // background: transparent;
   letter-spacing: 1px;
   font-size: 0.8rem;
   cursor: pointer;
+  border: 1.5px solid #fff;
+  background: $dark-violet;
+  color: $light-gray;
 
   &--nav {
-    color: $light-gray;
-    background: $dark-violet;
-    border: 1.5px solid #fff;
+    // color: $light-gray;
+    // background: $dark-violet;
+    // border: 1.5px solid #fff;
     font-family: $font-body;
     letter-spacing: 1.36px;
     font-size: 2rem;
@@ -94,7 +93,7 @@ li {
       color: $dark-violet;
     }
 
-    @include Lg {
+    @include Med {
       background: none;
       color: $dark-violet;
       font-size: 1.3rem;
@@ -109,5 +108,14 @@ li {
         color: $light-gray;
       }
     }
+  }
+
+  &--hero {
+    width: 14.6rem;
+    height: 4rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    letter-spacing: 1.5px;
   }
 }
