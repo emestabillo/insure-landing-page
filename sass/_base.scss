@@ -1,13 +1,27 @@
 //VARIABLES
 //Colors
-$primary-dark-violet: hsl(256, 26%, 20%);
-$primary-grayish-blue: hsl(216, 30%, 68%);
-$neutral-deep-violet: hsl(270, 9%, 17%);
-$neutral-grayish-violet: hsl(273, 4%, 51%);
-$neutral-light-gray: hsl(0, 0%, 98%);
+$dark-violet: hsl(256, 26%, 20%);
+$grayish-blue: hsl(216, 30%, 68%);
+$deep-violet: hsl(270, 9%, 17%);
+$grayish-violet: hsl(273, 4%, 51%);
+$light-gray: hsl(0, 0%, 98%);
 
 $font-heading: "DM Serif Display", serif;
 $font-body: "Karla", sans-serif; //400,700
+
+//MEDIA Queries
+
+@mixin Med {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin Lg {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
 
 //RESET
 *,
@@ -18,34 +32,22 @@ $font-body: "Karla", sans-serif; //400,700
   box-sizing: inherit;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 html {
   box-sizing: border-box;
+  // scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
   font-family: $font-body;
-}
-
-.wrapper {
-  width: 100%;
-  max-width: 90rem; //1440px
+  max-width: 144rem;
   margin: 0 auto;
 }
 
-.inner {
-  width: 100%;
-  max-width: 70rem; //1120px
+.container {
+  max-width: 111rem;
   margin: 0 auto;
-}
-
-.inner-padding {
-  padding: 0 1.5rem;
-  // padding: 1.875rem 1.5rem;
+  width: 90%;
 }
 
 img {
@@ -74,9 +76,38 @@ li {
   // background: transparent;
   letter-spacing: 1px;
   font-size: 0.8rem;
+  cursor: pointer;
 
-  &--hero {
-    color: $neutral-light-gray;
-    background: transparent;
+  &--nav {
+    color: $light-gray;
+    background: $dark-violet;
+    border: 1.5px solid #fff;
+    font-family: $font-body;
+    letter-spacing: 1.36px;
+    font-size: 2rem;
+    width: 87%;
+    max-width: 34rem;
+    height: 5.6rem;
+
+    &:hover {
+      background: $light-gray;
+      color: $dark-violet;
+    }
+
+    @include Lg {
+      background: none;
+      color: $dark-violet;
+      font-size: 1.3rem;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      border: 1px solid $dark-violet;
+      width: 14.6rem;
+      height: 4rem;
+
+      &:hover {
+        background: $dark-violet;
+        color: $light-gray;
+      }
+    }
   }
 }
