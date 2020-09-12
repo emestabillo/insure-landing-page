@@ -15,14 +15,14 @@ nav {
     list-style: none;
     height: 58.7rem;
     width: 100%;
-    top: 8rem;
+    top: 7.5rem;
     left: 0;
-    transition: all 0.2s ease-in-out;
-    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+    transform: scaleY(0);
     background: $dark-violet;
     transform-origin: top right;
     text-align: center;
-    padding: 4rem 0;
+    padding: 2.8rem 0 4rem 0;
     font-weight: 700;
     z-index: 10;
     text-transform: uppercase;
@@ -51,7 +51,8 @@ nav {
 
     li {
       line-height: 4rem;
-      padding-bottom: 2.4rem;
+      padding: 1.1rem 0;
+      // padding-bottom: 2.4rem;
 
       @include Med {
         padding-bottom: 0;
@@ -82,6 +83,7 @@ nav {
         padding: 1.2rem;
         letter-spacing: 1.36px;
         font-weight: 400;
+
         &:hover {
           color: $grayish-blue;
         }
@@ -120,6 +122,6 @@ nav {
   }
 
   #toggle:checked ~ .nav_links {
-    transform: scale(1);
+    transform: scaleY(1);
   }
 }

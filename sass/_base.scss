@@ -76,6 +76,12 @@ li {
   border: 1.5px solid #fff;
   background: $dark-violet;
   color: $light-gray;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $light-gray;
+    color: $dark-violet;
+  }
 
   &--nav {
     // color: $light-gray;
@@ -87,11 +93,6 @@ li {
     width: 87%;
     max-width: 34rem;
     height: 5.6rem;
-
-    &:hover {
-      background: $light-gray;
-      color: $dark-violet;
-    }
 
     @include Med {
       background: none;

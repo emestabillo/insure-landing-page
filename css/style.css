@@ -40,7 +40,11 @@ li {
   cursor: pointer;
   border: 1.5px solid #fff;
   background: #2d2640;
-  color: #fafafa; }
+  color: #fafafa;
+  transition: all 0.3s ease; }
+  .cta:hover {
+    background: #fafafa;
+    color: #2d2640; }
   .cta--nav {
     font-family: "Karla", sans-serif;
     letter-spacing: 1.36px;
@@ -48,9 +52,6 @@ li {
     width: 87%;
     max-width: 34rem;
     height: 5.6rem; }
-    .cta--nav:hover {
-      background: #fafafa;
-      color: #2d2640; }
     @media screen and (min-width: 768px) {
       .cta--nav {
         background: none;
@@ -86,14 +87,14 @@ nav {
     list-style: none;
     height: 58.7rem;
     width: 100%;
-    top: 8rem;
+    top: 7.5rem;
     left: 0;
-    transition: all 0.2s ease-in-out;
-    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+    transform: scaleY(0);
     background: #2d2640;
     transform-origin: top right;
     text-align: center;
-    padding: 4rem 0;
+    padding: 2.8rem 0 4rem 0;
     font-weight: 700;
     z-index: 10;
     text-transform: uppercase;
@@ -114,7 +115,7 @@ nav {
         margin: 0; } }
     nav .nav_links li {
       line-height: 4rem;
-      padding-bottom: 2.4rem; }
+      padding: 1.1rem 0; }
       @media screen and (min-width: 768px) {
         nav .nav_links li {
           padding-bottom: 0; } }
@@ -162,7 +163,7 @@ nav {
   nav #toggle:checked + .menu-icon {
     background-image: url(/images/icon-close.svg); }
   nav #toggle:checked ~ .nav_links {
-    transform: scale(1); }
+    transform: scaleY(1); }
 
 .hero {
   text-align: center;
@@ -172,22 +173,17 @@ nav {
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative; }
-      .hero::before {
-        content: url(/images/bg-pattern-intro-left-desktop.svg);
-        position: absolute;
-        top: 0;
-        left: 0; } }
+      position: relative; } }
   @media screen and (min-width: 768px) {
     .hero__image {
       flex: 1;
       order: 2;
       transform: translateY(6.5rem); } }
   .hero__text {
-    background-color: #2d2640;
     color: #fafafa;
-    padding: 9.3rem 0;
-    position: relative; }
+    padding: 9.2rem 0;
+    position: relative;
+    z-index: 2; }
     @media screen and (min-width: 768px) {
       .hero__text {
         flex: 1;
@@ -196,14 +192,15 @@ nav {
       content: url(/images/bg-pattern-intro-left-mobile.svg);
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      z-index: -1; }
       @media screen and (min-width: 768px) {
         .hero__text::before {
           display: none; } }
     .hero__text::after {
       content: url(/images/bg-pattern-intro-right-mobile.svg);
       position: absolute;
-      bottom: -18.1rem;
+      bottom: -17.8rem;
       right: 0; }
       @media screen and (min-width: 768px) {
         .hero__text::after {
