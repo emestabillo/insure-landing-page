@@ -1,50 +1,87 @@
 .hero {
   text-align: center;
   background: $dark-violet;
-  // z-index: 100;
-  // position: relative;
-
-  // &::before {
-  //   content: url(/images/bg-pattern-intro-left-mobile.svg);
-  //   position: absolute;
-  //   top: 63.3rem;
-  //   left: 0;
-  // }
 
   @include Med {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    // z-index: 100;
+    text-align: left;
 
-    // &::before {
-    //   content: url(/images/bg-pattern-intro-left-desktop.svg);
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   // z-index: 5;
-    // }
+    padding: 5rem 10%;
+    max-height: 600px;
+
+    &::before {
+      content: url(/images/bg-pattern-intro-left-desktop.svg);
+      position: absolute;
+      bottom: -33.5rem;
+      left: 0;
+    }
+
+    &::after {
+      content: url(/images/bg-pattern-intro-right-desktop.svg);
+      position: absolute;
+      top: -8rem;
+      right: 0;
+    }
   }
 
   &__image {
+    // background: url(/images/image-intro-mobile.jpg) no-repeat;
+    // height: 45rem;
+
     @include Med {
       flex: 1;
       order: 2;
-      transform: translateY(6.5rem);
+      // height: 650px;
+      // width: 540px;
+    }
+    img {
+      @include Xl {
+        margin-top: 26.5rem;
+        margin-left: -0.5rem;
+        height: 650px;
+        width: 540px;
+        // transform: translate(1.6rem, 10.5rem);
+      }
+    }
+    // img {
+    //   overflow: hidden;
+    //   margin-left: -5vw;
+    //   width: 100vw;
+    //   @include Lg {
+    //     transform: scale(0.8);
+    //   }
+
+    @media screen and (min-width: 1200px) {
+      // width: 75%;
+      // transform: translate(1.6rem, 10.5rem);
     }
   }
 
   &__text {
-    // background-color: $dark-violet;
     color: $light-gray;
-    padding: 9.2rem 0;
+    padding: 9.2rem 2rem;
     position: relative;
     z-index: 2;
 
     @include Med {
       flex: 1;
       order: 1;
+
+      display: grid;
+      grid-template-rows: repeat(3, max-content);
+      // grid-template-rows: 16rem 8rem 5rem;
+      row-gap: 2rem;
+
+      // padding-left: 13.5rem;
+      // padding-right: 15rem;
+      // padding-top: 17rem;
+    }
+
+    @media screen and (min-width: 1361px) {
+      grid-template-rows: 16rem 8rem 5rem;
     }
 
     &::before {
@@ -62,8 +99,8 @@
     &::after {
       content: url(/images/bg-pattern-intro-right-mobile.svg);
       position: absolute;
-      bottom: -17.8rem;
-      right: 0;
+      bottom: -18rem;
+      right: 0rem;
 
       @include Med {
         display: none;
@@ -75,11 +112,31 @@
       font-size: 4.8rem;
       line-height: 1;
       letter-spacing: -0.67px;
+
+      @include Med {
+        font-size: 5.5rem;
+      }
+
+      @include Xl {
+        font-size: 7.2rem;
+        line-height: 88%;
+        letter-spacing: -1px;
+        // padding: 4.2rem 6rem 0.7rem 0;
+        padding-top: 3.5rem;
+        padding-right: 3rem;
+      }
     }
     p {
       font-size: 1.6rem;
       line-height: 1.625;
-      padding: 1.6rem 0.8rem 3.2rem;
+      // padding: 1.6rem 0.8rem 3.2rem;
+      // padding: 2.5rem 0;
+      // padding-top: 1.2rem;
+      // padding-right: 1rem;
+      @include Xl {
+        padding-right: 1rem;
+        padding-top: 1.2rem;
+      }
     }
   }
 }

@@ -23,6 +23,12 @@ $font-body: "Karla", sans-serif; //400,700
   }
 }
 
+@mixin Xl {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
 //RESET
 *,
 *::before,
@@ -41,7 +47,11 @@ html {
 body {
   font-family: $font-body;
   max-width: 144rem;
-  // margin: 0 auto;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1441px) {
+    box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
 }
 
 .container {
@@ -118,5 +128,9 @@ li {
     font-size: 1.3rem;
     line-height: 1.5rem;
     letter-spacing: 1.5px;
+
+    @include Lg {
+      margin-top: 2rem;
+    }
   }
 }

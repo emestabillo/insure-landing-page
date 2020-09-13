@@ -6,7 +6,14 @@ nav {
 
   @include Med {
     // padding: 2.1rem 0 0 0.3rem;
-    padding: 2rem 0 1.8rem 0.3rem;
+    // padding: 2rem 0 1.8rem 0.3rem;
+    padding: 1rem 0 1.6rem 0.3rem;
+  }
+
+  .logo {
+    @include Med {
+      padding-top: 0.5rem;
+    }
   }
 
   .nav_links {
@@ -40,7 +47,7 @@ nav {
       display: flex;
       display: grid;
       grid-template-columns: repeat(4, max-content);
-      column-gap: 2.77rem;
+      column-gap: 2.8rem;
       transform: none;
       background: transparent;
       height: unset;
