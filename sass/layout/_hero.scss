@@ -12,10 +12,6 @@
     padding: 5rem 3vw;
     max-height: 60rem;
 
-    @include Lg {
-      padding: 5rem 10vw;
-    }
-
     &::before {
       content: url(/images/bg-pattern-intro-left-desktop.svg);
       position: absolute;
@@ -31,6 +27,10 @@
     }
   }
 
+  @include Xl {
+    padding: 5rem 16.5rem;
+  }
+
   &__image {
     @include Med {
       flex: 1;
@@ -40,7 +40,7 @@
     img {
       @include Xl {
         margin-top: 26.5rem;
-        margin-left: -0.5rem;
+        margin-left: 1rem;
         height: 650px;
         width: 540px;
       }
@@ -60,10 +60,11 @@
     @include Med {
       flex: 1;
       order: 1;
+      padding-left: 0;
     }
 
     @media screen and (min-width: 1361px) {
-      grid-template-rows: 16rem 8rem 5rem;
+      grid-template-rows: max-content 8rem 5rem;
     }
 
     &::before {
@@ -114,7 +115,7 @@
       line-height: 1.625;
 
       @include Xl {
-        padding-right: 1rem;
+        // padding-right: 1rem;
         padding-top: 1.2rem;
       }
     }
