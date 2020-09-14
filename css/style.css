@@ -75,7 +75,11 @@ li {
     font-weight: bold;
     font-size: 1.3rem;
     line-height: 1.5rem;
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.5px;
+    justify-self: center; }
+    @media screen and (min-width: 768px) {
+      .cta--hero {
+        justify-self: left; } }
     @media screen and (min-width: 992px) {
       .cta--hero {
         margin-top: 2rem; } }
@@ -86,6 +90,9 @@ li {
   border-top: 1px solid #fff;
   position: absolute;
   top: -3rem; }
+  @media screen and (max-width: 767px) {
+    .horizontal::before {
+      display: none; } }
 
 nav {
   padding: 2.4rem 2.5rem;
@@ -228,14 +235,14 @@ nav {
     color: #fafafa;
     padding: 9.2rem 2rem;
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    display: grid;
+    grid-template-rows: repeat(3, max-content);
+    row-gap: 2rem; }
     @media screen and (min-width: 768px) {
       .hero__text {
         flex: 1;
-        order: 1;
-        display: grid;
-        grid-template-rows: repeat(3, max-content);
-        row-gap: 2rem; } }
+        order: 1; } }
     @media screen and (min-width: 1361px) {
       .hero__text {
         grid-template-rows: 16rem 8rem 5rem; } }
