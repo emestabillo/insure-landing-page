@@ -1,13 +1,18 @@
 nav {
-  padding: 2.4rem 0.5rem;
+  padding: 2.4rem 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: white;
+  z-index: 10;
+  position: relative;
 
   @include Med {
-    // padding: 2.1rem 0 0 0.3rem;
-    // padding: 2rem 0 1.8rem 0.3rem;
-    padding: 1rem 0 1.6rem 0.3rem;
+    padding: 1rem 3vw 1.6rem;
+  }
+
+  @include Lg {
+    padding: 1rem 11.5vw 1.6rem;
   }
 
   .logo {
@@ -37,12 +42,6 @@ nav {
     margin: 0 auto;
 
     @include Med {
-      // left: 2rem;
-      // right: 2rem;
-      // width: 75rem;
-    }
-
-    @include Med {
       position: static;
       display: flex;
       display: grid;
@@ -59,7 +58,6 @@ nav {
     li {
       line-height: 4rem;
       padding: 1.1rem 0;
-      // padding-bottom: 2.4rem;
 
       @include Med {
         padding-bottom: 0;

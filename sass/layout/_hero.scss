@@ -9,8 +9,12 @@
     position: relative;
     text-align: left;
 
-    padding: 5rem 10%;
-    max-height: 600px;
+    padding: 5rem 3vw;
+    max-height: 60rem;
+
+    @include Lg {
+      padding: 5rem 10vw;
+    }
 
     &::before {
       content: url(/images/bg-pattern-intro-left-desktop.svg);
@@ -28,35 +32,18 @@
   }
 
   &__image {
-    // background: url(/images/image-intro-mobile.jpg) no-repeat;
-    // height: 45rem;
-
     @include Med {
       flex: 1;
       order: 2;
-      // height: 650px;
-      // width: 540px;
     }
+
     img {
       @include Xl {
         margin-top: 26.5rem;
         margin-left: -0.5rem;
         height: 650px;
         width: 540px;
-        // transform: translate(1.6rem, 10.5rem);
       }
-    }
-    // img {
-    //   overflow: hidden;
-    //   margin-left: -5vw;
-    //   width: 100vw;
-    //   @include Lg {
-    //     transform: scale(0.8);
-    //   }
-
-    @media screen and (min-width: 1200px) {
-      // width: 75%;
-      // transform: translate(1.6rem, 10.5rem);
     }
   }
 
@@ -72,12 +59,7 @@
 
       display: grid;
       grid-template-rows: repeat(3, max-content);
-      // grid-template-rows: 16rem 8rem 5rem;
       row-gap: 2rem;
-
-      // padding-left: 13.5rem;
-      // padding-right: 15rem;
-      // padding-top: 17rem;
     }
 
     @media screen and (min-width: 1361px) {
@@ -112,27 +94,25 @@
       font-size: 4.8rem;
       line-height: 1;
       letter-spacing: -0.67px;
+      position: relative;
 
       @include Med {
         font-size: 5.5rem;
+        position: relative;
       }
 
       @include Xl {
         font-size: 7.2rem;
         line-height: 88%;
         letter-spacing: -1px;
-        // padding: 4.2rem 6rem 0.7rem 0;
-        padding-top: 3.5rem;
-        padding-right: 3rem;
+        padding: 3.5rem 3rem 0 0;
       }
     }
+
     p {
       font-size: 1.6rem;
       line-height: 1.625;
-      // padding: 1.6rem 0.8rem 3.2rem;
-      // padding: 2.5rem 0;
-      // padding-top: 1.2rem;
-      // padding-right: 1rem;
+
       @include Xl {
         padding-right: 1rem;
         padding-top: 1.2rem;
