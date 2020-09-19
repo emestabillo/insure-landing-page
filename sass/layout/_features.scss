@@ -1,36 +1,45 @@
 .features {
   text-align: center;
-  padding-top: 8.75rem;
-  padding-bottom: 9rem;
+  padding: 14rem 0;
 
-  hr {
-    width: 40%;
-    margin: 0 auto;
-  }
   &__heading {
     color: $deep-violet;
-    font-size: 2.8rem;
-    padding: 2rem 0 4.25rem;
+    font-size: 4.8rem;
+    font-weight: 400;
+    letter-spacing: -0.67px;
+    padding-top: 3.2rem;
+    // padding-bottom: 8rem;
   }
   &__list {
+    padding-top: 7.2rem;
     li {
-      padding-bottom: 3rem;
+      padding-bottom: 4rem;
       display: grid;
-      grid-template-rows: 5.5rem 3.8rem 5rem;
-      grid-gap: 1rem;
+      grid-template-rows: 10rem 4rem 9rem;
+      grid-gap: 1.8rem;
 
       img {
-        width: 5.375rem;
-        height: 5.375rem;
+        width: 8.6rem;
+        height: 8.6rem;
         margin: 0 auto;
       }
       h2 {
         color: $deep-violet;
-        font-size: 1.7rem;
-        align-self: end;
+        font-size: 2.8rem;
+        // align-self: end;
+        letter-spacing: -0.39px;
+        font-weight: 400;
       }
       p {
         color: $grayish-violet;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        margin-top: -0.5rem;
+        padding: 0 0.7rem;
+
+        @include Med {
+          // padding: 0 15vw;
+        }
       }
     }
   }
