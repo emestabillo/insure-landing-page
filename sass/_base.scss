@@ -28,7 +28,7 @@ $font-body: "Karla", sans-serif; //400,700
   }
 }
 
-@mixin Xl {
+@mixin xl {
   @media screen and (min-width: 1200px) {
     @content;
   }
@@ -172,6 +172,11 @@ li {
       border-top: 1px solid #c396c6;
       left: 50%;
       margin: -3.2rem 0 0 -7.5rem;
+
+      @include Lg {
+        left: unset;
+        margin: -4.6rem 0 0 0;
+      }
     }
   }
 }

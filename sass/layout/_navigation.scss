@@ -11,7 +11,7 @@ nav {
     padding: 1rem 3vw 1.6rem;
   }
 
-  @include Xl {
+  @include xl {
     padding: 1rem 16.5rem 1.6rem;
   }
 
@@ -24,7 +24,6 @@ nav {
   }
 
   .nav_links {
-    transform: scale(0);
     position: fixed;
     list-style: none;
     height: 58.7rem;
