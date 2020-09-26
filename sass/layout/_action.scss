@@ -5,6 +5,7 @@
   position: relative;
   z-index: 2;
   line-height: 4rem;
+  overflow: hidden;
 
   &::before {
     content: url(/images/bg-pattern-how-we-work-mobile.svg);
@@ -12,12 +13,33 @@
     top: 0;
     right: 0;
     z-index: -1;
+    @include Lg {
+      content: url(/images/bg-pattern-how-we-work-desktop.svg);
+    }
+  }
+
+  @include Lg {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6.9rem 8.1rem;
   }
 
   &__heading {
+    // text-align: center;
     color: #fafafa;
     font-size: 4rem;
     letter-spacing: -0.56px;
     padding-bottom: 4rem;
+
+    @include Lg {
+      // text-align: left;
+      padding-bottom: 0;
+      font-size: 5.6rem;
+      letter-spacing: -0.78px;
+      line-height: 100%;
+      max-width: 47.5rem;
+    }
   }
 }

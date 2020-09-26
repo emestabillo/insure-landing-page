@@ -4,8 +4,9 @@
 
   @include Lg {
     text-align: left;
-    padding-top: 18rem;
     position: relative;
+    padding-top: 18rem;
+    padding-bottom: 10.3rem;
   }
 
   @include xl {

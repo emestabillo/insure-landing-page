@@ -70,7 +70,7 @@ li {
           background: #2d2640;
           color: #fafafa; } }
   .cta--action {
-    padding: 1.2rem 2.45rem;
+    padding: 1.1rem 2.35rem;
     font-size: 1.2rem;
     letter-spacing: 0.15rem;
     line-height: 1.52rem; }
@@ -99,7 +99,7 @@ li {
 
 .horizontal--hero::before {
   border-top: 1px solid #fff;
-  top: -3rem; }
+  top: -2.8rem; }
   @media screen and (max-width: 767px) {
     .horizontal--hero::before {
       display: none; } }
@@ -119,18 +119,36 @@ li {
   padding: 7.2rem 2.4rem;
   position: relative;
   z-index: 2;
-  line-height: 4rem; }
+  line-height: 4rem;
+  overflow: hidden; }
   .action::before {
     content: url(/images/bg-pattern-how-we-work-mobile.svg);
     position: absolute;
     top: 0;
     right: 0;
     z-index: -1; }
+    @media screen and (min-width: 992px) {
+      .action::before {
+        content: url(/images/bg-pattern-how-we-work-desktop.svg); } }
+  @media screen and (min-width: 992px) {
+    .action {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6.9rem 8.1rem; } }
   .action__heading {
     color: #fafafa;
     font-size: 4rem;
     letter-spacing: -0.56px;
     padding-bottom: 4rem; }
+    @media screen and (min-width: 992px) {
+      .action__heading {
+        padding-bottom: 0;
+        font-size: 5.6rem;
+        letter-spacing: -0.78px;
+        line-height: 100%;
+        max-width: 47.5rem; } }
 
 nav {
   padding: 2.4rem 2.5rem;
@@ -330,8 +348,9 @@ nav {
   @media screen and (min-width: 992px) {
     .features {
       text-align: left;
+      position: relative;
       padding-top: 18rem;
-      position: relative; } }
+      padding-bottom: 10.3rem; } }
   @media screen and (min-width: 1200px) {
     .features {
       padding-top: 32rem; } }
