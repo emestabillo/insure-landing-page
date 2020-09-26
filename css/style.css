@@ -18,11 +18,6 @@ body {
     body {
       box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2); } }
 
-.container {
-  max-width: 111rem;
-  margin: 0 auto;
-  width: 90%; }
-
 img {
   width: 100%;
   display: block; }
@@ -37,81 +32,8 @@ p {
 li {
   list-style: none; }
 
-.cta {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  border: 1.5px solid #fff;
-  background: #2d2640;
-  color: #fafafa;
-  transition: all 0.3s ease; }
-  .cta:hover {
-    background: #fafafa;
-    color: #2d2640; }
-  .cta--nav {
-    font-family: "Karla", sans-serif;
-    letter-spacing: 1.36px;
-    font-size: 2rem;
-    width: 87%;
-    max-width: 34rem;
-    height: 5.6rem; }
-    @media screen and (min-width: 768px) {
-      .cta--nav {
-        background: none;
-        color: #2d2640;
-        font-size: 1.3rem;
-        letter-spacing: 1.5px;
-        font-weight: bold;
-        border: 1px solid #2d2640;
-        width: 14.6rem;
-        height: 4rem; }
-        .cta--nav:hover {
-          background: #2d2640;
-          color: #fafafa; } }
-  .cta--action {
-    padding: 1.1rem 2.35rem;
-    font-size: 1.2rem;
-    letter-spacing: 0.15rem;
-    line-height: 1.52rem; }
-  .cta--hero {
-    width: 14.6rem;
-    height: 4rem;
-    font-weight: bold;
-    font-size: 1.3rem;
-    line-height: 1.5rem;
-    letter-spacing: 1.5px;
-    justify-self: center; }
-    @media screen and (max-width: 767px) {
-      .cta--hero {
-        margin-top: 1rem; } }
-    @media screen and (min-width: 768px) {
-      .cta--hero {
-        justify-self: left; } }
-    @media screen and (min-width: 992px) {
-      .cta--hero {
-        margin-top: 2rem; } }
-
-.horizontal::before {
-  content: "";
-  position: absolute;
-  width: 15rem; }
-
-.horizontal--hero::before {
-  border-top: 1px solid #fff;
-  top: -2.8rem; }
-  @media screen and (max-width: 767px) {
-    .horizontal--hero::before {
-      display: none; } }
-
-.horizontal--features::before {
-  border-top: 1px solid #c396c6;
-  left: 50%;
-  margin: -3.2rem 0 0 -7.5rem; }
-  @media screen and (min-width: 992px) {
-    .horizontal--features::before {
-      left: unset;
-      margin: -4.6rem 0 0 0; } }
+a {
+  text-decoration: none; }
 
 .action {
   text-align: center;
@@ -120,7 +42,8 @@ li {
   position: relative;
   z-index: 2;
   line-height: 4rem;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 14rem; }
   .action::before {
     content: url(/images/bg-pattern-how-we-work-mobile.svg);
     position: absolute;
@@ -219,7 +142,6 @@ nav {
           nav .nav_links li:last-child::after {
             display: none; } }
       nav .nav_links li a {
-        text-decoration: none;
         color: #fafafa;
         font-size: 2rem;
         padding: 1.2rem;
@@ -404,3 +326,11 @@ nav {
         @media screen and (min-width: 992px) {
           .features__list li p {
             padding: 0; } }
+
+footer {
+  background: #e4e4e4;
+  text-transform: uppercase;
+  text-align: center; }
+  footer .footer-img {
+    width: 30%;
+    margin: 0 auto; }
