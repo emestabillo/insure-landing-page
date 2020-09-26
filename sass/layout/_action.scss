@@ -1,0 +1,23 @@
+.action {
+  text-align: center;
+  background: #2d2640;
+  padding: 7.2rem 2.4rem;
+  position: relative;
+  z-index: 2;
+  line-height: 4rem;
+
+  &::before {
+    content: url(/images/bg-pattern-how-we-work-mobile.svg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__heading {
+    color: #fafafa;
+    font-size: 4rem;
+    letter-spacing: -0.56px;
+    padding-bottom: 4rem;
+  }
+}

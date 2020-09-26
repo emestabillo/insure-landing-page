@@ -1,6 +1,6 @@
 .features {
   text-align: center;
-  padding: 14rem 0;
+  padding: 14rem 0 12.2rem 0;
 
   @include Lg {
     text-align: left;
@@ -34,13 +34,16 @@
       padding-top: 7.9rem;
     }
     li {
-      padding-bottom: 4rem;
       display: grid;
       grid-template-rows: 10rem 4rem 9rem;
       grid-gap: 1.8rem;
 
       max-width: 60rem;
       margin: 0 auto;
+
+      &:not(:last-child) {
+        padding-bottom: 4rem;
+      }
 
       @include Lg {
         max-width: 35rem;

@@ -24,20 +24,25 @@ nav {
   }
 
   .nav_links {
+    // -webkit-transform: translateY(-100%);
+    // transform: translateY(-100%);
+    // opacity: 0;
+    // z-index: 100;
+    transform: scaleY(0);
+
     position: fixed;
     list-style: none;
     height: 58.7rem;
     width: 100%;
-    top: 7.5rem;
+    top: 8rem;
     left: 0;
     transition: all 0.3s ease-in-out;
-    transform: scaleY(0);
     background: $dark-violet;
     transform-origin: top right;
     text-align: center;
     padding: 2.8rem 0 4rem 0;
     font-weight: 700;
-    z-index: 10;
+    z-index: -1;
     text-transform: uppercase;
     list-style: none;
     margin: 0 auto;
@@ -129,5 +134,7 @@ nav {
 
   #toggle:checked ~ .nav_links {
     transform: scaleY(1);
+    // transform: translateY(0);
+    // opacity: 1;
   }
 }
