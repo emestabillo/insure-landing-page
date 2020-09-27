@@ -36,7 +36,7 @@ nav {
     width: 100%;
     top: 8rem;
     left: 0;
-    transition: all 0.3s ease-in-out;
+    transition: $animate;
     background: $dark-violet;
     transform-origin: top right;
     text-align: center;

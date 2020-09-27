@@ -1,9 +1,108 @@
-footer {
-  background: #e4e4e4;
+.footer {
+  background: $light-gray;
   text-transform: uppercase;
   text-align: center;
-  .footer-img {
-    width: 30%;
-    margin: 0 auto;
+  font-size: 1.3rem;
+  line-height: 1.52rem;
+  letter-spacing: 0.15rem;
+  font-weight: bold;
+  padding: 8.8rem 0;
+  position: relative;
+  z-index: 2;
+
+  &::before {
+    content: url(/images/bg-pattern-footer-mobile.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+  }
+
+  h3 {
+    padding-bottom: 3.6rem;
+    color: $grayish-violet;
+  }
+
+  ul {
+    padding-bottom: 4rem;
+  }
+
+  hr {
+    width: 100%;
+    margin-bottom: 4rem;
+    opacity: 0.5;
+    // border-top: 1px solid $grayish-violet;
+  }
+
+  &__social {
+    .footerLogo {
+      width: 11.12rem;
+      margin: 0 auto;
+      padding-bottom: 3.2rem;
+    }
+
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(4, 2.4rem);
+      column-gap: 1.6rem;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 3.8rem;
+
+      .icon {
+        transition: all 0.2s ease;
+
+        &:hover {
+          fill: $dark-violet;
+        }
+      }
+    }
+  }
+
+  &__about,
+  &__help,
+  &__contact,
+  &__others {
+    li:not(:last-child) {
+      padding-bottom: 1.6rem;
+    }
+
+    a {
+      color: $dark-violet;
+      position: relative;
+    }
+  }
+}
+
+.underline {
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    transition: $animate;
+    opacity: 1;
+    background-color: $dark-violet;
+    left: 0;
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  text-transform: initial;
+  letter-spacing: normal;
+  color: $grayish-violet;
+  padding: 0 0.5rem;
+  a:hover {
+    text-decoration: underline;
   }
 }

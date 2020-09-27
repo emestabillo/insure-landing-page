@@ -12,7 +12,7 @@
   border: 1.5px solid #fff;
   background: $dark-violet;
   color: $light-gray;
-  transition: all 0.3s ease;
+  transition: $animate;
 
   &:hover {
     background: $light-gray;

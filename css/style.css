@@ -26,6 +26,9 @@ h1,
 h2 {
   font-family: "DM Serif Display", serif; }
 
+h3 {
+  font-size: 1.3rem; }
+
 p {
   line-height: 1.5; }
 
@@ -34,6 +37,87 @@ li {
 
 a {
   text-decoration: none; }
+
+.container {
+  max-width: 111rem;
+  margin: 0 auto;
+  width: 90%; }
+
+.cta {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: 1.5px solid #fff;
+  background: #2d2640;
+  color: #fafafa;
+  transition: all 0.3s ease-in-out; }
+  .cta:hover {
+    background: #fafafa;
+    color: #2d2640; }
+  .cta--nav {
+    font-family: "Karla", sans-serif;
+    letter-spacing: 1.36px;
+    font-size: 2rem;
+    width: 87%;
+    max-width: 34rem;
+    height: 5.6rem; }
+    @media screen and (min-width: 768px) {
+      .cta--nav {
+        background: none;
+        color: #2d2640;
+        font-size: 1.3rem;
+        letter-spacing: 1.5px;
+        font-weight: bold;
+        border: 1px solid #2d2640;
+        width: 14.6rem;
+        height: 4rem; }
+        .cta--nav:hover {
+          background: #2d2640;
+          color: #fafafa; } }
+  .cta--action {
+    padding: 1.1rem 2.35rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    line-height: 1.52rem; }
+  .cta--hero {
+    width: 14.6rem;
+    height: 4rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    letter-spacing: 1.5px;
+    justify-self: center; }
+    @media screen and (max-width: 767px) {
+      .cta--hero {
+        margin-top: 1rem; } }
+    @media screen and (min-width: 768px) {
+      .cta--hero {
+        justify-self: left; } }
+    @media screen and (min-width: 992px) {
+      .cta--hero {
+        margin-top: 2rem; } }
+
+.horizontal::before {
+  content: "";
+  position: absolute;
+  width: 15rem; }
+
+.horizontal--hero::before {
+  border-top: 1px solid #fff;
+  top: -2.8rem; }
+  @media screen and (max-width: 767px) {
+    .horizontal--hero::before {
+      display: none; } }
+
+.horizontal--features::before {
+  border-top: 1px solid #c396c6;
+  left: 50%;
+  margin: -3.2rem 0 0 -7.5rem; }
+  @media screen and (min-width: 992px) {
+    .horizontal--features::before {
+      left: unset;
+      margin: -4.6rem 0 0 0; } }
 
 .action {
   text-align: center;
@@ -327,10 +411,75 @@ nav {
           .features__list li p {
             padding: 0; } }
 
-footer {
-  background: #e4e4e4;
+.footer {
+  background: #fafafa;
   text-transform: uppercase;
-  text-align: center; }
-  footer .footer-img {
-    width: 30%;
-    margin: 0 auto; }
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.52rem;
+  letter-spacing: 0.15rem;
+  font-weight: bold;
+  padding: 8.8rem 0;
+  position: relative;
+  z-index: 2; }
+  .footer::before {
+    content: url(/images/bg-pattern-footer-mobile.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%; }
+  .footer h3 {
+    padding-bottom: 3.6rem;
+    color: #837d87; }
+  .footer ul {
+    padding-bottom: 4rem; }
+  .footer hr {
+    width: 100%;
+    margin-bottom: 4rem;
+    opacity: 0.5; }
+  .footer__social .footerLogo {
+    width: 11.12rem;
+    margin: 0 auto;
+    padding-bottom: 3.2rem; }
+  .footer__social .icons {
+    display: grid;
+    grid-template-columns: repeat(4, 2.4rem);
+    column-gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3.8rem; }
+    .footer__social .icons .icon {
+      transition: all 0.2s ease; }
+      .footer__social .icons .icon:hover {
+        fill: #2d2640; }
+  .footer__about li:not(:last-child), .footer__help li:not(:last-child), .footer__contact li:not(:last-child), .footer__others li:not(:last-child) {
+    padding-bottom: 1.6rem; }
+  .footer__about a, .footer__help a, .footer__contact a, .footer__others a {
+    color: #2d2640;
+    position: relative; }
+
+.underline:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  background-color: #2d2640;
+  left: 0; }
+
+.underline:hover:before {
+  opacity: 1;
+  width: 100%; }
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  text-transform: initial;
+  letter-spacing: normal;
+  color: #837d87;
+  padding: 0 0.5rem; }
+  .attribution a:hover {
+    text-decoration: underline; }
