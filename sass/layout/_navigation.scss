@@ -28,8 +28,8 @@ nav {
     // transform: translateY(-100%);
     // opacity: 0;
     // z-index: 100;
+    -webkit-transform: scaleY(0);
     transform: scaleY(0);
-
     position: fixed;
     list-style: none;
     height: 58.7rem;
@@ -132,8 +132,7 @@ nav {
   }
 
   #toggle:checked ~ .nav_links {
+    -webkit-transform: scaleY(1);
     transform: scaleY(1);
-    // transform: translateY(0);
-    // opacity: 1;
   }
 }

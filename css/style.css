@@ -12,11 +12,7 @@ html {
 
 body {
   font-family: "Karla", sans-serif;
-  max-width: 144rem;
   margin: 0 auto; }
-  @media screen and (min-width: 1441px) {
-    body {
-      box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2); } }
 
 img {
   width: 100%;
@@ -120,37 +116,38 @@ a {
       margin: -4.6rem 0 0 0; } }
 
 .action {
-  text-align: center;
-  background: #2d2640;
-  padding: 7.2rem 2.4rem;
-  position: relative;
-  z-index: 2;
-  line-height: 4rem;
-  overflow: hidden;
-  margin-bottom: 14rem; }
-  .action::before {
-    content: url(/images/bg-pattern-how-we-work-mobile.svg);
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1; }
+  padding-bottom: 14rem; }
+  .action__content {
+    text-align: center;
+    background: #2d2640;
+    padding: 7.2rem 2.4rem;
+    position: relative;
+    z-index: 2;
+    line-height: 4rem;
+    overflow: hidden; }
+    .action__content::before {
+      content: url(/images/bg-pattern-how-we-work-mobile.svg);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1; }
+      @media screen and (min-width: 992px) {
+        .action__content::before {
+          content: url(/images/bg-pattern-how-we-work-desktop.svg); } }
     @media screen and (min-width: 992px) {
-      .action::before {
-        content: url(/images/bg-pattern-how-we-work-desktop.svg); } }
-  @media screen and (min-width: 992px) {
-    .action {
-      text-align: left;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 6.9rem 8.1rem; } }
-  .action__heading {
+      .action__content {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6.9rem 8.1rem; } }
+  .action .heading {
     color: #fafafa;
     font-size: 4rem;
     letter-spacing: -0.56px;
     padding-bottom: 4rem; }
     @media screen and (min-width: 992px) {
-      .action__heading {
+      .action .heading {
         padding-bottom: 0;
         font-size: 5.6rem;
         letter-spacing: -0.78px;
@@ -176,6 +173,7 @@ nav {
       padding-top: 0.7rem;
       padding-left: 0.2rem; } }
   nav .nav_links {
+    -webkit-transform: scaleY(0);
     transform: scaleY(0);
     position: fixed;
     list-style: none;
@@ -255,6 +253,7 @@ nav {
   nav #toggle:checked + .menu-icon {
     background-image: url(/images/icon-close.svg); }
   nav #toggle:checked ~ .nav_links {
+    -webkit-transform: scaleY(1);
     transform: scaleY(1); }
 
 .hero {
@@ -419,16 +418,22 @@ nav {
   line-height: 1.52rem;
   letter-spacing: 0.15rem;
   font-weight: bold;
-  padding: 8.8rem 0;
+  padding: 8.8rem 0 0;
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  overflow-x: hidden; }
+  @media screen and (min-width: 768px) {
+    .footer {
+      padding: 7.55rem 0 0; } }
   .footer::before {
     content: url(/images/bg-pattern-footer-mobile.svg);
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
-    width: 100%; }
+    z-index: -1; }
+    @media screen and (min-width: 768px) {
+      .footer::before {
+        content: url(/images/bg-pattern-footer-desktop.svg); } }
   .footer h3 {
     padding-bottom: 3.6rem;
     color: #837d87; }
@@ -436,26 +441,36 @@ nav {
     padding-bottom: 4rem; }
   .footer hr {
     width: 100%;
-    margin-bottom: 4rem;
+    margin-bottom: 3.9rem;
     opacity: 0.5; }
-  .footer__social .footerLogo {
+  @media screen and (min-width: 768px) {
+    .footer__top {
+      display: flex;
+      justify-content: space-between; } }
+  .footer__top .footerLogo {
     width: 11.12rem;
     margin: 0 auto;
     padding-bottom: 3.2rem; }
-  .footer__social .icons {
+  .footer__top .icons {
     display: grid;
     grid-template-columns: repeat(4, 2.4rem);
     column-gap: 1.6rem;
     justify-content: center;
     align-items: center;
     padding-bottom: 3.8rem; }
-    .footer__social .icons .icon {
+    .footer__top .icons .icon {
       transition: all 0.2s ease; }
-      .footer__social .icons .icon:hover {
+      .footer__top .icons .icon:hover {
         fill: #2d2640; }
-  .footer__about li:not(:last-child), .footer__help li:not(:last-child), .footer__contact li:not(:last-child), .footer__others li:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    .footer__bottom {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: left;
+      grid-gap: 3rem; } }
+  .footer .about li:not(:last-child) {
     padding-bottom: 1.6rem; }
-  .footer__about a, .footer__help a, .footer__contact a, .footer__others a {
+  .footer .about a {
     color: #2d2640;
     position: relative; }
 
@@ -474,12 +489,11 @@ nav {
   opacity: 1;
   width: 100%; }
 
-.attribution {
-  position: absolute;
-  bottom: 1rem;
+.underline .attribution {
   text-transform: initial;
   letter-spacing: normal;
   color: #837d87;
-  padding: 0 0.5rem; }
-  .attribution a:hover {
+  margin: 30px 0 0 0;
+  text-align: center; }
+  .underline .attribution a:hover {
     text-decoration: underline; }

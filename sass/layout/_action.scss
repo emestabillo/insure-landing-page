@@ -1,33 +1,35 @@
 .action {
-  text-align: center;
-  background: #2d2640;
-  padding: 7.2rem 2.4rem;
-  position: relative;
-  z-index: 2;
-  line-height: 4rem;
-  overflow: hidden;
-  margin-bottom: 14rem;
+  padding-bottom: 14rem;
+  &__content {
+    text-align: center;
+    background: #2d2640;
+    padding: 7.2rem 2.4rem;
+    position: relative;
+    z-index: 2;
+    line-height: 4rem;
+    overflow: hidden;
 
-  &::before {
-    content: url(/images/bg-pattern-how-we-work-mobile.svg);
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
+    &::before {
+      content: url(/images/bg-pattern-how-we-work-mobile.svg);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+      @include Lg {
+        content: url(/images/bg-pattern-how-we-work-desktop.svg);
+      }
+    }
+
     @include Lg {
-      content: url(/images/bg-pattern-how-we-work-desktop.svg);
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6.9rem 8.1rem;
     }
   }
 
-  @include Lg {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 6.9rem 8.1rem;
-  }
-
-  &__heading {
+  .heading {
     // text-align: center;
     color: #fafafa;
     font-size: 4rem;
