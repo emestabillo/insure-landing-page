@@ -1,16 +1,10 @@
 .hero {
   text-align: center;
   background: $dark-violet;
-  // max-width: 111rem;
 
   @include Med {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     position: relative;
     text-align: left;
-
-    // padding: 5rem 3vw;
     max-height: 60rem;
 
     &::before {
@@ -25,15 +19,7 @@
       position: absolute;
       top: -8rem;
       right: 0;
-
-      @include Med {
-        // top: 0;
-      }
     }
-  }
-
-  @include xl {
-    // padding: 5rem 16.5rem;
   }
 
   .container {
@@ -54,20 +40,11 @@
     @include Med {
       flex: 1;
       order: 2;
-      // max-width: 498px;
-      // max-height: 600px;
     }
 
     img {
-      @include Med {
-        // width: 498px;
-        // height: 600px;
-      }
       @include xl {
-        // margin-top: 26rem;
-        // margin-top: 10.5rem;
         margin-left: 1rem;
-        // height: 650px;
         width: 540px;
         transform: translateY(10.5rem);
       }
@@ -78,7 +55,7 @@
     color: $light-gray;
     padding: 9.2rem 2rem;
     position: relative;
-    z-index: 2;
+    // z-index: 2;
 
     display: grid;
     grid-template-rows: repeat(3, max-content);
@@ -92,13 +69,6 @@
 
     @include xl {
       padding: 0 2rem 1.5rem 0;
-      //   padding-right: 2rem;
-      // padding-bottom: 1.5rem;
-
-      // @media screen and (min-width: 1361px) {
-      //   grid-template-rows: max-content 8rem 5rem;
-      // }
-
       grid-template-rows: max-content 8rem 5rem;
     }
 
@@ -107,7 +77,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      z-index: -1;
+      z-index: 0;
 
       @include Med {
         display: none;
@@ -142,19 +112,15 @@
         line-height: 89%;
         letter-spacing: -1px;
         font-weight: 400;
-        // padding: 3.5rem 3rem 0 0;
         padding-right: 2rem;
       }
     }
 
     p {
       font-size: 1.6rem;
-      // line-height: 1.625;
       line-height: 2.6rem;
 
       @include xl {
-        // padding-right: 1rem;
-        // padding-top: 1.2rem;
         padding-top: 0.8rem;
       }
     }

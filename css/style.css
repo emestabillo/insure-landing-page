@@ -59,7 +59,7 @@ a {
 .cta {
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   cursor: pointer;
   border: 1.5px solid #fff;
   color: #fafafa;
@@ -87,16 +87,10 @@ a {
         .cta--nav:hover {
           background: #2d2640;
           color: #fafafa; } }
-  .cta--action {
-    padding: 1.1rem 2.35rem;
-    font-size: 1.2rem;
-    letter-spacing: 0.15rem;
-    line-height: 1.52rem; }
   .cta--hero {
     width: 14.6rem;
     height: 4rem;
     font-weight: bold;
-    font-size: 1.3rem;
     line-height: 1.52rem;
     letter-spacing: 1.5px;
     justify-self: center;
@@ -107,10 +101,15 @@ a {
     @media screen and (min-width: 768px) {
       .cta--hero {
         justify-self: left;
-        width: auto; } }
+        width: auto;
+        padding: 1.2rem 2.75rem; } }
     @media screen and (min-width: 992px) {
       .cta--hero {
         margin-top: 1.6rem; } }
+  .cta--action {
+    padding: 1.1rem 2.35rem;
+    letter-spacing: 0.15rem;
+    line-height: 1.52rem; }
 
 .horizontal::before {
   content: "";
@@ -229,6 +228,17 @@ a {
   text-transform: uppercase;
   list-style: none;
   margin: 0 auto; }
+  .menu-links::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    left: 0;
+    width: 100vw;
+    top: 59rem; }
   @media screen and (min-width: 768px) {
     .menu-links {
       position: static;
@@ -269,11 +279,12 @@ a {
   @media screen and (min-width: 768px) {
     .plans {
       margin: 0 0 0 0.8rem; } }
-  .plans a {
-    padding: 1.5rem 10rem; }
-    @media screen and (min-width: 768px) {
-      .plans a {
-        padding: 1.2rem 2.75rem; } }
+  @media screen and (max-width: 767px) {
+    .plans a {
+      padding: 1.5rem 10rem; } }
+  @media screen and (min-width: 768px) {
+    .plans a {
+      padding: 1.2rem 2.75rem; } }
 
 #toggle {
   display: none; }
@@ -284,6 +295,9 @@ a {
 #toggle:checked ~ .menu-links {
   -webkit-transform: scaleY(1);
   transform: scaleY(1); }
+
+#toggle:checked ~ .menu-links:after {
+  opacity: 1; }
 
 .hero {
   text-align: center;
@@ -324,7 +338,6 @@ a {
     color: #fafafa;
     padding: 9.2rem 2rem;
     position: relative;
-    z-index: 2;
     display: grid;
     grid-template-rows: repeat(3, max-content);
     row-gap: 2rem; }
@@ -342,7 +355,7 @@ a {
       position: absolute;
       top: 0;
       left: 0;
-      z-index: -1; }
+      z-index: 0; }
       @media screen and (min-width: 768px) {
         .hero .heading::before {
           display: none; } }

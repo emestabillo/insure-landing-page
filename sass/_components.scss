@@ -7,7 +7,8 @@
 .cta {
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.8rem;
+  // font-size: 0.8rem;
+  font-size: 1.3rem;
   cursor: pointer;
   border: 1.5px solid #fff;
   // background: $dark-violet;
@@ -48,19 +49,11 @@
     }
   }
 
-  &--action {
-    // padding: 1.2rem 2.45rem;
-    padding: 1.1rem 2.35rem;
-    font-size: 1.2rem;
-    letter-spacing: 0.15rem;
-    line-height: 1.52rem;
-  }
-
   &--hero {
     width: 14.6rem;
     height: 4rem;
     font-weight: bold;
-    font-size: 1.3rem;
+    // font-size: 1.3rem;
     line-height: 1.52rem;
     letter-spacing: 1.5px;
     justify-self: center;
@@ -73,11 +66,20 @@
     @include Med {
       justify-self: left;
       width: auto;
+      padding: 1.2rem 2.75rem;
     }
 
     @include Lg {
       margin-top: 1.6rem;
     }
+  }
+
+  &--action {
+    // padding: 1.2rem 2.45rem;
+    padding: 1.1rem 2.35rem;
+    // font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    line-height: 1.52rem;
   }
 }
 

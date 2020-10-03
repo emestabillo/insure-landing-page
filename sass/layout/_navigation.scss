@@ -76,6 +76,19 @@ a {
   list-style: none;
   margin: 0 auto;
 
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    opacity: 0;
+    left: 0;
+    width: 100vw;
+    top: 59rem;
+  }
+
   @include Med {
     position: static;
     display: flex;
@@ -131,132 +144,15 @@ a {
   }
 
   a {
-    padding: 1.5rem 10rem;
+    @include Sm {
+      padding: 1.5rem 10rem;
+    }
 
     @include Med {
       padding: 1.2rem 2.75rem;
     }
   }
 }
-
-// .menu {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   background: white;
-//   z-index: 10;
-//   position: relative;
-
-//   a {
-//     padding-left: 0;
-//   }
-
-//   &__logo {
-//     @include Med {
-//       padding-top: 0.7rem;
-//       padding-left: 0.2rem;
-//     }
-//   }
-
-//   &__icon {
-//     width: 3.2rem;
-//     height: 3.2rem;
-//     cursor: pointer;
-//     background-image: url(/images/icon-hamburger.svg);
-//     @include Med {
-//       display: none;
-//     }
-//   }
-
-//   &__links {
-//     // -webkit-transform: translateY(-100%);
-//     // transform: translateY(-100%);
-//     // opacity: 0;
-//     // z-index: 100;
-//     -webkit-transform: scaleY(0);
-//     transform: scaleY(0);
-//     position: fixed;
-//     list-style: none;
-//     height: 58.7rem;
-//     width: 100%;
-//     top: 8rem;
-//     left: 0;
-//     transition: $animate;
-//     background: $dark-violet;
-//     transform-origin: top right;
-//     text-align: center;
-//     padding: 2.8rem 0 4rem 0;
-//     font-weight: 700;
-//     z-index: -1;
-//     text-transform: uppercase;
-//     list-style: none;
-//     margin: 0 auto;
-
-//     @include Med {
-//       position: static;
-//       display: flex;
-//       display: grid;
-//       grid-template-columns: repeat(4, max-content);
-//       column-gap: 2.8rem;
-//       transform: none;
-//       background: transparent;
-//       height: unset;
-//       width: unset;
-//       padding: 0;
-//       margin: 0;
-//     }
-
-//     li {
-//       line-height: 4rem;
-//       padding: 1.1rem 0;
-
-//       @include Med {
-//         padding-bottom: 0;
-//       }
-
-//       &:last-child {
-//         &::after {
-//           content: "";
-//           background-image: url(/images/bg-pattern-mobile-nav.svg);
-//           position: absolute;
-//           left: 0;
-//           bottom: 0;
-//           height: 218px;
-//           width: 100%;
-//           width: 100%;
-//           background-size: cover;
-
-//           @include Med {
-//             display: none;
-//           }
-//         }
-//       }
-
-// a {
-//   color: $light-gray;
-//   font-size: 2rem;
-//   padding: 1.2rem;
-//   letter-spacing: 1.36px;
-//   font-weight: 400;
-
-//   &:hover {
-//     color: $grayish-blue;
-//   }
-
-//   @include Med {
-//     color: $grayish-violet;
-//     font-size: 1.3rem;
-//     letter-spacing: 1.5px;
-//     font-weight: bold;
-//     padding: 0;
-
-//     &:hover {
-//       color: $dark-violet;
-//     }
-//   }
-// }
-// }
-// }
 
 #toggle {
   display: none;
@@ -269,4 +165,8 @@ a {
 #toggle:checked ~ .menu-links {
   -webkit-transform: scaleY(1);
   transform: scaleY(1);
+}
+
+#toggle:checked ~ .menu-links:after {
+  opacity: 1;
 }
