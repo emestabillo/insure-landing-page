@@ -20,7 +20,9 @@ img {
 
 h1,
 h2 {
-  font-family: "DM Serif Display", serif; }
+  font-family: "DM Serif Display", serif;
+  color: white;
+  font-weight: 400; }
 
 h3 {
   font-size: 1.3rem; }
@@ -33,7 +35,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #fafafa;
+  color: white;
   font-size: 2rem;
   padding: 1.2rem;
   letter-spacing: 1.36px;
@@ -62,18 +64,19 @@ a {
   font-size: 1.3rem;
   cursor: pointer;
   border: 1.5px solid #fff;
-  color: #fafafa;
+  color: white;
   transition: all 0.3s ease-in-out;
-  padding: 1.2rem 2.65rem; }
+  height: 4rem; }
   .cta:hover {
-    background: #fafafa;
+    background: white;
     color: #2d2640; }
   .cta--nav {
     font-family: "Karla", sans-serif;
     letter-spacing: 1.36px;
     font-size: 2rem;
     width: 87%;
-    max-width: 34rem; }
+    max-width: 34rem;
+    padding: 1.2rem 2.65rem; }
     @media screen and (min-width: 768px) {
       .cta--nav {
         background: none;
@@ -82,11 +85,10 @@ a {
         letter-spacing: 1.5px;
         font-weight: bold;
         border: 1px solid #2d2640;
-        width: 14.6rem;
-        height: 4rem; }
+        width: 14.6rem; }
         .cta--nav:hover {
           background: #2d2640;
-          color: #fafafa; } }
+          color: white; } }
   .cta--hero {
     width: 14.6rem;
     height: 4rem;
@@ -102,14 +104,14 @@ a {
       .cta--hero {
         justify-self: left;
         width: auto;
-        padding: 1.2rem 2.75rem; } }
+        padding: 1.15rem 2.65rem; } }
     @media screen and (min-width: 992px) {
       .cta--hero {
         margin-top: 1.6rem; } }
   .cta--action {
-    padding: 1.1rem 2.35rem;
     letter-spacing: 0.15rem;
-    line-height: 1.52rem; }
+    line-height: 1.52rem;
+    padding: 1rem 2.25rem; }
 
 .horizontal::before {
   content: "";
@@ -135,6 +137,9 @@ a {
 
 .action {
   padding-bottom: 14rem; }
+  @media screen and (min-width: 992px) {
+    .action {
+      padding-bottom: 15rem; } }
   .action__content {
     text-align: center;
     background: #2d2640;
@@ -158,9 +163,8 @@ a {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 6.9rem 8.1rem; } }
+        padding: 7rem 8rem 6.8rem 8.1rem; } }
   .action .heading {
-    color: #fafafa;
     font-size: 4rem;
     letter-spacing: -0.56px;
     padding-bottom: 4rem; }
@@ -279,12 +283,11 @@ a {
   @media screen and (min-width: 768px) {
     .plans {
       margin: 0 0 0 0.8rem; } }
-  @media screen and (max-width: 767px) {
-    .plans a {
-      padding: 1.5rem 10rem; } }
-  @media screen and (min-width: 768px) {
-    .plans a {
-      padding: 1.2rem 2.75rem; } }
+  .plans a {
+    padding: 1.5rem 10rem; }
+    @media screen and (min-width: 768px) {
+      .plans a {
+        padding: 1.15rem 2.7rem; } }
 
 #toggle {
   display: none; }
@@ -335,7 +338,7 @@ a {
       width: 540px;
       transform: translateY(10.5rem); } }
   .hero .heading {
-    color: #fafafa;
+    color: white;
     padding: 9.2rem 2rem;
     position: relative;
     display: grid;
@@ -382,7 +385,6 @@ a {
           font-size: 7.2rem;
           line-height: 89%;
           letter-spacing: -1px;
-          font-weight: 400;
           padding-right: 2rem; } }
     .hero .heading p {
       font-size: 1.6rem;
@@ -399,14 +401,13 @@ a {
       text-align: left;
       position: relative;
       padding-top: 18rem;
-      padding-bottom: 10.3rem; } }
+      padding-bottom: 10.1rem; } }
   @media screen and (min-width: 1200px) {
     .features {
       padding-top: 32rem; } }
   .features__heading {
     color: #2b272f;
     font-size: 4.8rem;
-    font-weight: 400;
     letter-spacing: -0.67px;
     padding-top: 3.2rem; }
     @media screen and (min-width: 992px) {
@@ -442,8 +443,7 @@ a {
       .features__list li h2 {
         color: #2b272f;
         font-size: 2.8rem;
-        letter-spacing: -0.39px;
-        font-weight: 400; }
+        letter-spacing: -0.39px; }
       .features__list li p {
         color: #837d87;
         font-size: 1.6rem;
@@ -468,7 +468,7 @@ a {
   overflow-x: hidden; }
   @media screen and (min-width: 768px) {
     .footer {
-      padding: 7.55rem 0 0; } }
+      padding: 6.7rem 0 0; } }
   .footer::before {
     content: url(/images/bg-pattern-footer-mobile.svg);
     position: absolute;

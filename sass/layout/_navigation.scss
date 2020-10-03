@@ -144,12 +144,10 @@ a {
   }
 
   a {
-    @include Sm {
-      padding: 1.5rem 10rem;
-    }
+    padding: 1.5rem 10rem;
 
     @include Med {
-      padding: 1.2rem 2.75rem;
+      padding: 1.15rem 2.7rem;
     }
   }
 }

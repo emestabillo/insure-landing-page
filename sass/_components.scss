@@ -12,12 +12,12 @@
   cursor: pointer;
   border: 1.5px solid #fff;
   // background: $dark-violet;
-  color: $light-gray;
+  color: $white;
   transition: $animate;
-  padding: 1.2rem 2.65rem;
+  height: 4rem;
 
   &:hover {
-    background: $light-gray;
+    background: $white;
     color: $dark-violet;
   }
 
@@ -30,6 +30,7 @@
     font-size: 2rem;
     width: 87%;
     max-width: 34rem;
+    padding: 1.2rem 2.65rem;
     // height: 5.6rem;
 
     @include Med {
@@ -40,11 +41,11 @@
       font-weight: bold;
       border: 1px solid $dark-violet;
       width: 14.6rem;
-      height: 4rem;
+      // height: 4rem;
 
       &:hover {
         background: $dark-violet;
-        color: $light-gray;
+        color: $white;
       }
     }
   }
@@ -66,7 +67,8 @@
     @include Med {
       justify-self: left;
       width: auto;
-      padding: 1.2rem 2.75rem;
+      // padding: 1.2rem 2.75rem;
+      padding: 1.15rem 2.65rem;
     }
 
     @include Lg {
@@ -76,10 +78,12 @@
 
   &--action {
     // padding: 1.2rem 2.45rem;
-    padding: 1.1rem 2.35rem;
+    // padding: 1.1rem 2.35rem;
     // font-size: 1.2rem;
     letter-spacing: 0.15rem;
     line-height: 1.52rem;
+    // height: 4rem;
+    padding: 1rem 2.25rem;
   }
 }
 

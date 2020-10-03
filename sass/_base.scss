@@ -7,6 +7,7 @@ $grayish-blue: hsl(216, 30%, 68%);
 $deep-violet: hsl(270, 9%, 17%);
 $grayish-violet: hsl(273, 4%, 51%);
 $light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
 
 $font-heading: "DM Serif Display", serif;
 $font-body: "Karla", sans-serif; //400,700
@@ -72,6 +73,8 @@ img {
 h1,
 h2 {
   font-family: $font-heading;
+  color: $white;
+  font-weight: 400;
 }
 
 h3 {
@@ -88,7 +91,7 @@ li {
 
 a {
   text-decoration: none;
-  color: $light-gray;
+  color: $white;
   font-size: 2rem;
   padding: 1.2rem;
   letter-spacing: 1.36px;
@@ -111,6 +114,3 @@ a {
     }
   }
 }
-// a {
-
-// }
