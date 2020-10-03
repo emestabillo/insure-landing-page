@@ -8,24 +8,38 @@ $deep-violet: hsl(270, 9%, 17%);
 $grayish-violet: hsl(273, 4%, 51%);
 $light-gray: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
-
+//Fonts
 $font-heading: "DM Serif Display", serif;
 $font-body: "Karla", sans-serif; //400,700
+//Transitions
+$animate: all 0.3s ease-in-out;
 
-//MEDIA Queries
-@mixin Sm {
-  @media screen and (max-width: 767px) {
-    @content;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-@mixin Med {
+@keyframes slideUp {
+  0% {
+    transform: translateY(5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+//MEDIA QUERIES
+@mixin med {
   @media screen and (min-width: 768px) {
     @content;
   }
 }
 
-@mixin Lg {
+@mixin lg {
   @media screen and (min-width: 992px) {
     @content;
   }
@@ -36,8 +50,6 @@ $font-body: "Karla", sans-serif; //400,700
     @content;
   }
 }
-
-$animate: all 0.3s ease-in-out;
 
 //RESET
 *,
@@ -51,18 +63,12 @@ $animate: all 0.3s ease-in-out;
 //MAIN STYLES
 html {
   box-sizing: border-box;
-  // scroll-behavior: smooth;
   font-size: 62.5%;
 }
 
 body {
   font-family: $font-body;
-  // max-width: 144rem;
   margin: 0 auto;
-
-  @media screen and (min-width: 1441px) {
-    // box-shadow: 0 0 1rem 0.5rem rgba(0, 0, 0, 0.2);
-  }
 }
 
 img {
@@ -102,7 +108,7 @@ a {
     color: $grayish-blue;
   }
 
-  @include Med {
+  @include med {
     color: $grayish-violet;
     font-size: 1.3rem;
     letter-spacing: 1.5px;

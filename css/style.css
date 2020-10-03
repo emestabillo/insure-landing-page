@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(5rem); }
+  100% {
+    transform: translateY(0); } }
+
 *,
 *::before,
 *::after {
@@ -336,6 +348,9 @@ a {
     .hero .image {
       flex: 1;
       order: 2; } }
+  @media screen and (min-width: 992px) {
+    .hero .image img {
+      animation: fadeIn 2s ease; } }
   @media screen and (min-width: 1200px) {
     .hero .image img {
       margin-left: 1rem;
@@ -353,6 +368,9 @@ a {
         flex: 1;
         order: 1;
         padding-left: 0; } }
+    @media screen and (min-width: 992px) {
+      .hero .heading {
+        animation: fadeIn 2s ease, slideUp 2s ease; } }
     @media screen and (min-width: 1200px) {
       .hero .heading {
         padding: 0 2rem 1.5rem 0;

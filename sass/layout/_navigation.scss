@@ -1,20 +1,10 @@
 .navigation {
   padding: 1.9rem 0.6rem;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // background: white;
-  // z-index: 10;
-  // position: relative;
-
   background: white;
   position: relative;
   z-index: 1;
 
-  @include Med {
-    // padding: 1rem 3vw 1.6rem;
-    // padding: 0;
-    // padding: 1rem 0 1.8rem;
+  @include med {
     padding: 1.8rem 0;
   }
 
@@ -27,15 +17,14 @@
     z-index: 10;
     position: relative;
 
-    @include Med {
+    @include med {
       padding: 0;
     }
   }
 }
 
 .menu-logo {
-  @include Med {
-    // padding-top: 0.7rem;
+  @include med {
     padding-top: 0;
     padding-left: 0.3rem;
   }
@@ -51,7 +40,7 @@ a {
   cursor: pointer;
   background-image: url(/images/icon-hamburger.svg);
 
-  @include Med {
+  @include med {
     display: none;
   }
 }
@@ -89,7 +78,7 @@ a {
     top: 59rem;
   }
 
-  @include Med {
+  @include med {
     position: static;
     display: flex;
     display: grid;
@@ -110,8 +99,7 @@ a {
     line-height: 4rem;
     padding: 1.1rem 0;
 
-    @include Med {
-      // padding-bottom: 0;
+    @include med {
       padding: 0;
     }
 
@@ -127,7 +115,7 @@ a {
         width: 100%;
         background-size: cover;
 
-        @include Med {
+        @include med {
           display: none;
         }
       }
@@ -138,15 +126,14 @@ a {
 .plans {
   margin-top: 0.8rem;
 
-  @include Med {
-    // margin-top: 0;
+  @include med {
     margin: 0 0 0 0.8rem;
   }
 
   a {
     padding: 1.5rem 10rem;
 
-    @include Med {
+    @include med {
       padding: 1.15rem 2.7rem;
     }
   }
