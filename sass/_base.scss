@@ -47,6 +47,7 @@ $animate: all 0.3s ease-in-out;
   box-sizing: inherit;
 }
 
+//MAIN STYLES
 html {
   box-sizing: border-box;
   // scroll-behavior: smooth;
@@ -87,4 +88,29 @@ li {
 
 a {
   text-decoration: none;
+  color: $light-gray;
+  font-size: 2rem;
+  padding: 1.2rem;
+  letter-spacing: 1.36px;
+  font-weight: 400;
+  transition: 0.2s ease;
+
+  &:hover {
+    color: $grayish-blue;
+  }
+
+  @include Med {
+    color: $grayish-violet;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    padding: 0;
+
+    &:hover {
+      color: $dark-violet;
+    }
+  }
 }
+// a {
+
+// }
