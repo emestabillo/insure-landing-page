@@ -96,12 +96,11 @@ a {
     line-height: 1.52rem;
     letter-spacing: 1.5px;
     justify-self: center;
-    padding: 1.2rem; }
-    @media screen and (max-width: 767px) {
-      .cta--hero {
-        margin-top: 1rem; } }
+    padding: 1.2rem;
+    margin-top: 1.4rem; }
     @media screen and (min-width: 768px) {
       .cta--hero {
+        margin-top: 0;
         justify-self: left;
         width: auto;
         padding: 1.15rem 2.65rem; } }
@@ -111,7 +110,10 @@ a {
   .cta--action {
     letter-spacing: 0.15rem;
     line-height: 1.52rem;
-    padding: 1rem 2.25rem; }
+    padding: 1rem 2.5rem; }
+    @media screen and (min-width: 992px) {
+      .cta--action {
+        padding: 1rem 2.2rem; } }
 
 .horizontal::before {
   content: "";
@@ -140,10 +142,12 @@ a {
   @media screen and (min-width: 992px) {
     .action {
       padding-bottom: 15rem; } }
+  .action .container {
+    width: 87%; }
   .action__content {
     text-align: center;
     background: #2d2640;
-    padding: 7.2rem 2.4rem;
+    padding: 7.2rem 2.4rem 7rem;
     position: relative;
     z-index: 2;
     line-height: 4rem;
@@ -167,7 +171,7 @@ a {
   .action .heading {
     font-size: 4rem;
     letter-spacing: -0.56px;
-    padding-bottom: 4rem; }
+    padding-bottom: 4.2rem; }
     @media screen and (min-width: 992px) {
       .action .heading {
         padding-bottom: 0;
@@ -339,11 +343,11 @@ a {
       transform: translateY(10.5rem); } }
   .hero .heading {
     color: white;
-    padding: 9.2rem 2rem;
+    padding: 9.1rem 2.5rem 9.3rem;
     position: relative;
     display: grid;
     grid-template-rows: repeat(3, max-content);
-    row-gap: 2rem; }
+    row-gap: 1.7rem; }
     @media screen and (min-width: 768px) {
       .hero .heading {
         flex: 1;
@@ -352,7 +356,8 @@ a {
     @media screen and (min-width: 1200px) {
       .hero .heading {
         padding: 0 2rem 1.5rem 0;
-        grid-template-rows: max-content 8rem 5rem; } }
+        grid-template-rows: 14rem 8rem 5rem;
+        row-gap: 1.4rem; } }
     .hero .heading::before {
       content: url(/images/bg-pattern-intro-left-mobile.svg);
       position: absolute;
@@ -391,20 +396,20 @@ a {
       line-height: 2.6rem; }
       @media screen and (min-width: 1200px) {
         .hero .heading p {
-          padding-top: 0.8rem; } }
+          padding-top: 0.2rem; } }
 
 .features {
   text-align: center;
-  padding: 14rem 0 12.2rem 0; }
+  padding: 14rem 0 12.3rem 0; }
   @media screen and (min-width: 992px) {
     .features {
       text-align: left;
       position: relative;
       padding-top: 18rem;
-      padding-bottom: 10.1rem; } }
+      padding-bottom: 10.2rem; } }
   @media screen and (min-width: 1200px) {
     .features {
-      padding-top: 32rem; } }
+      padding-top: 31.9rem; } }
   .features__heading {
     color: #2b272f;
     font-size: 4.8rem;
@@ -468,7 +473,7 @@ a {
   overflow-x: hidden; }
   @media screen and (min-width: 768px) {
     .footer {
-      padding: 6.7rem 0 0; } }
+      padding: 6.4rem 0 0 0; } }
   .footer::before {
     content: url(/images/bg-pattern-footer-mobile.svg);
     position: absolute;
@@ -494,14 +499,17 @@ a {
   .footer__top .footerLogo {
     width: 11.12rem;
     margin: 0 auto;
-    padding-bottom: 3.2rem; }
+    padding: 0.3rem 0 3.2rem; }
   .footer__top .icons {
     display: grid;
     grid-template-columns: repeat(4, 2.4rem);
     column-gap: 1.6rem;
     justify-content: center;
     align-items: center;
-    padding-bottom: 3.8rem; }
+    padding-bottom: 3.6rem; }
+    @media screen and (min-width: 768px) {
+      .footer__top .icons {
+        padding-bottom: 3rem; } }
     .footer__top .icons .icon {
       transition: all 0.2s ease; }
       .footer__top .icons .icon:hover {
@@ -511,7 +519,8 @@ a {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       text-align: left;
-      grid-gap: 3rem; } }
+      grid-gap: 3rem;
+      padding: 0.8rem 0 0.9rem; } }
   .footer .about li:not(:last-child) {
     padding-bottom: 1.6rem; }
   .footer .about a {
@@ -535,11 +544,16 @@ a {
   opacity: 1;
   width: 100%; }
 
-.underline .attribution {
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
   text-transform: initial;
-  letter-spacing: normal;
-  color: #837d87;
-  margin: 30px 0 0 0;
-  text-align: center; }
-  .underline .attribution a:hover {
+  letter-spacing: normal; }
+  .attribution a {
+    font-size: inherit;
+    color: #837d87;
+    text-decoration: none;
+    letter-spacing: normal; }
+  .attribution a:hover {
+    color: #ff1427;
     text-decoration: underline; }

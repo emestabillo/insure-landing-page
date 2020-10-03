@@ -60,11 +60,11 @@
     justify-self: center;
     padding: 1.2rem;
 
-    @include Sm {
-      margin-top: 1rem;
-    }
+    // margin-top: 1rem;
+    margin-top: 1.4rem;
 
     @include Med {
+      margin-top: 0;
       justify-self: left;
       width: auto;
       // padding: 1.2rem 2.75rem;
@@ -83,7 +83,12 @@
     letter-spacing: 0.15rem;
     line-height: 1.52rem;
     // height: 4rem;
-    padding: 1rem 2.25rem;
+    // padding: 1rem 2.25rem;
+    padding: 1rem 2.5rem;
+
+    @include Lg {
+      padding: 1rem 2.2rem;
+    }
   }
 }
 

@@ -1,16 +1,16 @@
 .features {
   text-align: center;
-  padding: 14rem 0 12.2rem 0;
+  padding: 14rem 0 12.3rem 0;
 
   @include Lg {
     text-align: left;
     position: relative;
     padding-top: 18rem;
-    padding-bottom: 10.1rem;
+    padding-bottom: 10.2rem;
   }
 
   @include xl {
-    padding-top: 32rem;
+    padding-top: 31.9rem;
   }
 
   &__heading {

@@ -5,10 +5,15 @@
     padding-bottom: 15rem;
   }
 
+  .container {
+    //small devices only
+    width: 87%;
+  }
+
   &__content {
     text-align: center;
     background: #2d2640;
-    padding: 7.2rem 2.4rem;
+    padding: 7.2rem 2.4rem 7rem;
     position: relative;
     z-index: 2;
     line-height: 4rem;
@@ -38,7 +43,7 @@
   .heading {
     font-size: 4rem;
     letter-spacing: -0.56px;
-    padding-bottom: 4rem;
+    padding-bottom: 4.2rem;
 
     @include Lg {
       padding-bottom: 0;
