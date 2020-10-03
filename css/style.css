@@ -190,7 +190,7 @@ a {
         font-size: 5.6rem;
         letter-spacing: -0.78px;
         line-height: 100%;
-        max-width: 47.5rem; } }
+        width: 50%; } }
 
 .navigation {
   padding: 1.9rem 0.6rem;
@@ -528,9 +528,10 @@ a {
     @media screen and (min-width: 768px) {
       .footer__top .icons {
         padding-bottom: 3rem; } }
-    .footer__top .icons .icon {
+    .footer__top .icons svg {
+      fill: #837d88;
       transition: all 0.2s ease; }
-      .footer__top .icons .icon:hover {
+      .footer__top .icons svg:hover {
         fill: #2d2640; }
   @media screen and (min-width: 768px) {
     .footer__bottom {
