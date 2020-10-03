@@ -1,9 +1,18 @@
 .action {
   padding-bottom: 14rem;
+
+  @include lg {
+    padding-bottom: 15rem;
+  }
+
+  .container {
+    width: 87%;
+  }
+
   &__content {
     text-align: center;
     background: #2d2640;
-    padding: 7.2rem 2.4rem;
+    padding: 7.2rem 2.4rem 7rem;
     position: relative;
     z-index: 2;
     line-height: 4rem;
@@ -15,29 +24,26 @@
       top: 0;
       right: 0;
       z-index: -1;
-      @include Lg {
+      @include lg {
         content: url(/images/bg-pattern-how-we-work-desktop.svg);
       }
     }
 
-    @include Lg {
+    @include lg {
       text-align: left;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 6.9rem 8.1rem;
+      padding: 7rem 8rem 6.8rem 8.1rem;
     }
   }
 
   .heading {
-    // text-align: center;
-    color: #fafafa;
     font-size: 4rem;
     letter-spacing: -0.56px;
-    padding-bottom: 4rem;
+    padding-bottom: 4.2rem;
 
-    @include Lg {
-      // text-align: left;
+    @include lg {
       padding-bottom: 0;
       font-size: 5.6rem;
       letter-spacing: -0.78px;

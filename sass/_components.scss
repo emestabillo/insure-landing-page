@@ -7,32 +7,27 @@
 .cta {
   text-transform: uppercase;
   letter-spacing: 1px;
-  // font-size: 0.8rem;
   font-size: 1.3rem;
   cursor: pointer;
   border: 1.5px solid #fff;
-  // background: $dark-violet;
-  color: $light-gray;
+  color: $white;
   transition: $animate;
-  padding: 1.2rem 2.65rem;
+  height: 4rem;
 
   &:hover {
-    background: $light-gray;
+    background: $white;
     color: $dark-violet;
   }
 
   &--nav {
-    // color: $light-gray;
-    // background: $dark-violet;
-    // border: 1.5px solid #fff;
     font-family: $font-body;
     letter-spacing: 1.36px;
     font-size: 2rem;
     width: 87%;
     max-width: 34rem;
-    // height: 5.6rem;
+    padding: 1.2rem 2.65rem;
 
-    @include Med {
+    @include med {
       background: none;
       color: $dark-violet;
       font-size: 1.3rem;
@@ -40,11 +35,10 @@
       font-weight: bold;
       border: 1px solid $dark-violet;
       width: 14.6rem;
-      height: 4rem;
 
       &:hover {
         background: $dark-violet;
-        color: $light-gray;
+        color: $white;
       }
     }
   }
@@ -53,33 +47,32 @@
     width: 14.6rem;
     height: 4rem;
     font-weight: bold;
-    // font-size: 1.3rem;
     line-height: 1.52rem;
     letter-spacing: 1.5px;
     justify-self: center;
     padding: 1.2rem;
+    margin-top: 1.4rem;
 
-    @include Sm {
-      margin-top: 1rem;
-    }
-
-    @include Med {
+    @include med {
+      margin-top: 0;
       justify-self: left;
       width: auto;
-      padding: 1.2rem 2.75rem;
+      padding: 1.15rem 2.65rem;
     }
 
-    @include Lg {
+    @include lg {
       margin-top: 1.6rem;
     }
   }
 
   &--action {
-    // padding: 1.2rem 2.45rem;
-    padding: 1.1rem 2.35rem;
-    // font-size: 1.2rem;
     letter-spacing: 0.15rem;
     line-height: 1.52rem;
+    padding: 1rem 2.5rem;
+
+    @include lg {
+      padding: 1rem 2.2rem;
+    }
   }
 }
 
@@ -96,7 +89,7 @@
       border-top: 1px solid #fff;
       top: -6.4rem;
 
-      @include Lg {
+      @include lg {
         display: block;
       }
     }
@@ -108,7 +101,7 @@
       left: 50%;
       margin: -3.2rem 0 0 -7.5rem;
 
-      @include Lg {
+      @include lg {
         left: unset;
         margin: -4.6rem 0 0 0;
       }
