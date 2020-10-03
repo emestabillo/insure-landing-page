@@ -45,10 +45,15 @@
 
     @include lg {
       padding-bottom: 0;
-      font-size: 5.6rem;
       letter-spacing: -0.78px;
       line-height: 100%;
-      width: 50%;
+      max-width: 55%;
+      font-size: 4.5rem;
+    }
+
+    @include xl {
+      font-size: 5.6rem;
+      max-width: 47.5rem;
     }
   }
 }

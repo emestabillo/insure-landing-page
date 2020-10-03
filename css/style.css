@@ -187,10 +187,14 @@ a {
     @media screen and (min-width: 992px) {
       .action .heading {
         padding-bottom: 0;
-        font-size: 5.6rem;
         letter-spacing: -0.78px;
         line-height: 100%;
-        width: 50%; } }
+        max-width: 55%;
+        font-size: 4.5rem; } }
+    @media screen and (min-width: 1200px) {
+      .action .heading {
+        font-size: 5.6rem;
+        max-width: 47.5rem; } }
 
 .navigation {
   padding: 1.9rem 0.6rem;
